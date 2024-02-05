@@ -1,0 +1,529 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.title {
+  font-size: 160px;
+  font-weight: 700;
+  font-family: "Kanit", sans-serif;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  color: rgba(31, 41, 55, 1);
+}
+
+.sub {
+  font-size: 30px;
+  font-family: "Kanit", sans-serif;
+  padding: 0%;
+  margin: 0%;
+  position: relative;
+  bottom: 60px;
+}
+
+.all1,
+.all2 {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  height: 100vh;
+  box-sizing: content-box;
+  align-items: center;
+  animation: appear;
+  animation-duration: 5s;
+}
+
+.dash {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/wallpaper1.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  animation: static;
+  animation-duration: 3s;
+}
+
+.glass {
+  width: auto;
+  height: 180px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.345);
+  background-size: cover;
+  position: absolute;
+  box-shadow: 0px 0px 40px 10px black;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  border-radius: 30px;
+}
+
+.info {
+  margin-top: 10px;
+  width: 85vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 30px;
+}
+
+.header_dash {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  width: 85vw;
+  height: 50px;
+  border-bottom: 2px solid #ffffff;
+  font-weight: 600;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 18px;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.gas {
+  position: relative;
+  right: 10px;
+}
+
+/* .weather {
+  background-image: url("./images/weather-rainy.png");
+  background-size: cover;
+} */
+
+.humidity {
+  color: #ffffff;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.humidity p {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 20px;
+  font-size: 30px;
+}
+
+.drop {
+  position: fixed;
+  right: 0;
+  top: 36vh;
+}
+
+.graph {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-family: "SF Pro Display", sans-serif;
+  text-align: center;
+  position: fixed;
+}
+
+.light p {
+  margin: 0;
+  padding: 0;
+}
+
+.light_value {
+  font-size: 70px;
+}
+
+.light_img {
+  position: relative;
+  left: 22%;
+  bottom: 19%;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-family: "SF Pro Display", sans-serif;
+  text-align: center;
+}
+
+.day {
+  background-color: #ffffff;
+  color: rgba(65, 197, 211, 1);
+  border-radius: 15px;
+}
+
+.temp_img {
+  position: relative;
+  bottom: 50px;
+  left: 40px;
+}
+
+.graph_img {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+  left: 95px;
+}
+
+.temperature_value {
+  font-size: 80px;
+  padding: 0;
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
+}
+
+.temperature span {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 50px;
+  position: relative;
+  bottom: 5vh;
+}
+
+.pic {
+  position: relative;
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pic p {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 28vh;
+  margin-right: 6vw;
+}
+
+@keyframes appear1 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* .dash,
+.all2 {
+  display: none;
+} */
+
+.all2 {
+  animation: appear;
+  animation-duration: 6s;
+}
+
+.welcome {
+  font-size: 60px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.2em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.temp_img img,
+.pic img,
+.drop img,
+.light_img img {
+  animation: jump 2s ease 0s infinite;
+}
+
+.gas {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+}
+
+.bar {
+position: absolute;
+top: 0px;
+  width: 3px;
+  background-color: white;
+  /* height: 50px; */
+  border-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 8px;
+
+}
+
+.total {
+    position: relative;
+  width: 3px;
+  background-color: rgba(64, 72, 154, 1);
+  height: 100px;
+  border-radius: 6px;
+  width: 8px;
+}
+
+.total p{
+    margin-top: 44px;
+}
+
+.values {
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+}
+
+.temp {
+  display: flex;
+  justify-content: space-around;
+}
+
+.temperature {
+  position: fixed;
+  left: 10%;
+}
+
+.lightg,
+.graph {
+  width: 35em;
+}
+
+.lightg {
+  display: flex;
+  justify-content: space-around;
+  font-family: "SF Pro Display", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  position: relative;
+  bottom: 14vh;
+  left: 10px;
+}
+
+.pv,
+.vv,
+.fv,
+.facv {
+  font-family: "Bebas Neue", cursive;
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 3em;
+}
+
+.line {
+  padding: 0;
+  margin-top: 0;
+  width: 1px;
+  height: 50px;
+  background-color: #ffffff;
+}
+
+.lightgg {
+  display: flex;
+  flex-direction: column;
+  overflow-block: clip;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.hand {
+  display: flex;
+}
+
+.values {
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+  font-size: 3em;
+}
+
+.row {
+  display: flex;
+}
+
+.rain_value {
+  font-family: "Bebas Neue", cursive;
+  color: #ffffff;
+  font-size: 70px;
+}
+
+.probability {
+  color: rgba(64, 72, 154, 1);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.model {
+  font-size: 15px;
+}
+
+.probability {
+  position: relative;
+  top: 18px;
+  left: 8px;
+}
+
+.Rain {
+  position: fixed;
+  top: 24%;
+}
+
+.gas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.all2,
+.dash {
+  display: none;
+}
+
+@keyframes static {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: rgba(64, 72, 154, 1);
+  --secondary: white;
+  --size: 100px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 2 / 1;
+  border-radius: 50% / 100% 100% 0 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 0.75turn at 50% 100%,
+    var(--primary) calc(var(--percentage) * 1% / 2),
+    var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%)
+  );
+  mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  /* counter-reset: percentage var(--value);
+  content: counter(percentage); */
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+.humidity p {
+  margin-top: 15px;
+}
+
+canvas {
+  background: transparent;
+}
+
+.total p {
+  font-size: 13px;
+  position: relative;
+  top: 45%;
+}
+
+.total {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}

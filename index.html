@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="weather_style.css" />
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;900&family=Open+Sans:wght@600&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="all1">
+      <div class="title">
+        IoT Lab
+        <div class="sub">KIIT</div>
+      </div>
+    </div>
+
+    <div class="all2">
+      <div class="title welcome">Welcome back</div>
+    </div>
+
+    <div class="dash">
+      <div class="header_dash">
+        <div>IoT Lab KiiT</div>
+
+        <div class="date">01 Monday, April</div>
+      </div>
+      <div class="info">
+        <div class="glass temp">
+          <div class="temperature">
+            Temperature
+            <p class="temperature_value"><span id="temperature_value"></span><span>°</span></p>
+            <div class="day">Sunday</div>
+          </div>
+          <div class="graph_img">
+            <canvas id="myChart" width="310" height="100"></canvas>
+          </div>
+          <div class="temp_img">
+            <img
+              src="./images/temp.png"
+              width="100%"
+              height="100%"
+              alt="weather_status"
+            />
+          </div>
+        </div>
+        <div class="weather glass">
+          <div class="pic">
+            <div class="Rain">
+              Rain
+              <div class="row">
+
+                <div class="rain_value">70%</div>
+
+                <div class="probability">CHANCE <br />OF RAIN</div>
+              </div>
+              <!-- <div class="model">predicted using {} model</div> -->
+            </div>
+            <img
+              src="./images/rain.png"
+              alt="weather"
+              width="120%"
+              height="80%"
+            />
+          </div>
+        </div>
+        <div class="glass">
+          <div class="humidity">
+            Humidity
+            <div
+              id="humidity_value"
+              role="progressbar"
+              aria-valuenow="33"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+            <p>%</p>
+          </div>
+          <div class="drop"><img src="./images/humid.png" width="150px" /></div>
+        </div>
+        <div class="glass lightgg">
+          <img src="./images/hand.png" width="90%" />
+
+          <div class="lightg">
+            <div class="power">
+              <div class="pv" id="pv"></div>
+              power
+            </div>
+            <div class="line"></div>
+            <div class="voltage">
+              <div class="vv" id="vv"></div>
+              voltage
+            </div>
+            <div class="line"></div>
+            <div class="freq">
+              <div class="fv" id="fv"></div>
+              freq
+            </div>
+            <div class="line"></div>
+            <div class="factor">
+              <div class="facv" id="facv">27</div>
+              power factor
+            </div>
+          </div>
+        </div>
+
+        <div class="glass graph">
+          <div class="values">
+            Gas - 5
+            <div class="total">
+              <div class="bar" style="height: 80px;"></div>
+              <p>methane</p>
+            </div>
+
+            <div class="total" >
+              <div class="bar" style="height: 70px;"></div>
+              <p>propane</p>
+            </div>
+            <div class="total">
+              <div class="bar" style="height:60px"></div>
+              <p>NG</p>
+            </div>
+            <div class="total">
+              <div class="bar" style="height:80px"></div>
+              <p>CO</p>
+            </div>
+            <div class="total">
+              <div class="bar" style="height:85px"></div>
+              <p>hydrogen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
